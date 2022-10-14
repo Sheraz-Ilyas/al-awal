@@ -19,12 +19,12 @@ app.use('/api/product/category',categoryRoute)
 const port = process.env.PORT || 8000;
 module.exports=port;
 
-// if (process.env.NODE_ENV==='production') {
-//   app.use(express.static('Frontend/build'))
-//   // app.get('*',(req, res)=>{
-//   //   res.sendFile(path.resolve(__dirname,'Frontend','build','index.html'))
-//   // })
-// }
+if (process.env.NODE_ENV==='production') {
+  app.use(express.static('Frontend/build'))
+  app.get('*',(req, res)=>{
+    res.sendFile(path.resolve(__dirname,'Frontend','build','index.html'))
+  })
+}
 
 app.listen(port, () => console.log(`listening on port ${port}...`));
 connectMongoDB();
