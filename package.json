@@ -9,7 +9,7 @@
   },
 	"scripts": {
 		"start": "node index.js",
-		"build": "cd Frontend && npm run build"
+		"build": "cd Frontend && npm run build",
   		"heroku-postbuild": "npm run install-frontend && npm run build"
 
 	},
