@@ -9,7 +9,7 @@
   },
 	"scripts": {
 		"start": "node index.js",
-		"build": "cd Frontend && npm run build",
+		"build": "cd Frontend && npm run build"
 	},
 	"keywords": [],
 	"author": "",
